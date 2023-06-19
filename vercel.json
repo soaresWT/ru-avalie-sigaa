@@ -1,8 +1,13 @@
 {
   "version": 2,
   "builds": [
-Expand All
-	@@ -13,5 +11,16 @@
+    {
+      "src": "index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
       "src": "/(.*)",
       "dest": "index.js"
     }
