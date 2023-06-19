@@ -3,9 +3,9 @@ const bodyParser = require("body-parser");
 const sigaa = require("./modules/sigaa");
 const creditos = require("./modules/creditos");
 const cardapio = require("./modules/cardapio");
-const cors = require("cors");
+//const cors = require("cors");
 const app = express();
-app.use(cors());
+//app.use(cors());
 
 
 
