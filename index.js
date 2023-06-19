@@ -3,9 +3,9 @@ const bodyParser = require("body-parser");
 const sigaa = require("./modules/sigaa");
 const creditos = require("./modules/creditos");
 const cardapio = require("./modules/cardapio");
-//const cors = require("cors");
+const cors = require("cors");
 const app = express();
-//app.use(cors());
+app.use(cors());
 
 
 
@@ -22,6 +22,7 @@ app.get("/", (_, res) => {
 
 app.post("/sigaa", (req, res) => {
   const { login, senha } = req.body;
+  console.log(login, senha);
   sigaa.access(login, senha).then((response) => {
     res.send(sigaa.scrape(response, login));
   });
